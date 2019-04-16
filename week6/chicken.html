@@ -1,0 +1,53 @@
+<!doctype html> <!-- chicken.html -->
+<html><head><meta charset="utf-8"/><meta name="viewport"content="width=device-width,initial-scale=1"/>
+<title>치킨</title>
+<script>
+function team(obj) {
+var name_a = ["깻잎후라이드치킨","깻잎화이트휠레어니언","깻잎양념치킨","깻잎마늘간장치킨","깻잎핫스파이스치킨","깻잎칠리맛치킨","깻잎갈릭맛치킨","깻잎벌꽃스윙스","깻잎눈꽃샐러드","깻잎허니버터갈릭","햇잎커리치킨"];
+var name_b = ["후라이드치킨","양념치킨","눈꽃치즈치킨","허니버터치킨","간장치킨","후라이드반+양념반"];
+var name_c = ["숯불양념구이","순살숯불양념구이","숯불소금구이","간장양념치킨","후라이드치킨","양념치킨","12월의눈꽃치즈치킨"];
+var name_d = ["치토스치킨","Mr.김치킨","강정치킨","오징어짬뽕치킨","치토스치킨","코코안심텐더","눈꽃치즈치킨","후라이드","반반치킨","순살크리스피","양념치킨","매운양념치킨","간장치킨","마늘치킨","땡초치킨","파닭","멕시윙","멕시핀"];
+var name_e = ["뿌링클","맛초킹","치하오","붐바스틱","갈비레오","핫갈비레오","치레카","후라이드","핫후라이드","양념치킨","소떡강정","맵스터","바삭클","스윗텐더"];
+var name_f = ["화이트치킨슈프림","양념치킨","슈프림양념치킨","치즈슈프람양념치킨","매운불양념","치폴레양념치킨","와락 라이스","화이트치킨파인유자","화이트치킨골드치즈","슈프림골드양념치킨","치즈슈프림양념치킨"];
+var name_g = ["후라이드","핫후라이드","양념치킨","스노윙치킨","핫블링치킨","쇼킹핫양념치킨","포테이토짜용치킨","오리엔탈파닭","크리미언치킨","네네마늘치킨","후닭" ];
+var name_h = ["후라이드","양념치킨","간장치킨","매운양념","반반치킨","치즈뿌리오","마늘치킨","핫데블치킨"];
+
+var target = document.getElementById("namex");
+ if(obj.value == "a") var k = name_a;
+else if(obj.value == "b") var k = name_b;
+else if(obj.value == "c") var k = name_c;
+else if(obj.value == "d") var k = name_d;
+else if(obj.value == "e") var k = name_e;
+else if(obj.value == "f") var k = name_f;
+else if(obj.value == "g") var k = name_g;
+else if(obj.value == "h") var k = name_h;
+ 
+  target.options.length = 0;
+ 
+  for (x in k) {
+    var opt = document.createElement("option");
+    opt.value = k[x];
+    opt.innerHTML = k[x];
+    target.appendChild(opt);
+    }
+    }
+    </script>
+    
+</head>
+<body>
+<section>
+<fieldset>
+<legend>☆맛있는 치킨★</legend>
+<label for="teamx">브랜드</label>
+<select id="teamx" name="baseballteam" onchange ="team(this)">
+<option value="a"selected>깻잎두마리치킨 대전대점</option>
+<option value="b">후라이드참잘하는집 가양자양점</option>
+<option value="c">동근이숯불두마리치킨 우송점</option>
+<option value="d">멕시카나치킨 용운점</option>
+<option value="e">BHC 우송대보건대점</option>
+<option value="f">처갓집양념치킨 용운판암점</option>
+<option value="g">네네치킨 용운판암점</option>
+<option value="h">페리카나 판암점</option></select>
+<label for="name">치킨</label>
+<select id="namex" name="name"></select>
+</fieldset></section></body></html>
