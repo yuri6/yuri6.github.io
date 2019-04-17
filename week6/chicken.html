@@ -2,6 +2,9 @@
 <html><head><meta charset="utf-8"/><meta name="viewport"content="width=device-width,initial-scale=1"/>
 <title>치킨</title>
 <script>
+
+var chick;
+
 function team(obj) {
 var name_a = ["깻잎후라이드치킨","깻잎화이트휠레어니언","깻잎양념치킨","깻잎마늘간장치킨","깻잎핫스파이스치킨","깻잎칠리맛치킨","깻잎갈릭맛치킨","깻잎벌꽃스윙스","깻잎눈꽃샐러드","깻잎허니버터갈릭","햇잎커리치킨"];
 var name_b = ["후라이드치킨","양념치킨","눈꽃치즈치킨","허니버터치킨","간장치킨","후라이드반+양념반"];
@@ -11,16 +14,39 @@ var name_e = ["뿌링클","맛초킹","치하오","붐바스틱","갈비레오",
 var name_f = ["화이트치킨슈프림","양념치킨","슈프림양념치킨","치즈슈프람양념치킨","매운불양념","치폴레양념치킨","와락 라이스","화이트치킨파인유자","화이트치킨골드치즈","슈프림골드양념치킨","치즈슈프림양념치킨"];
 var name_g = ["후라이드","핫후라이드","양념치킨","스노윙치킨","핫블링치킨","쇼킹핫양념치킨","포테이토짜용치킨","오리엔탈파닭","크리미언치킨","네네마늘치킨","후닭" ];
 var name_h = ["후라이드","양념치킨","간장치킨","매운양념","반반치킨","치즈뿌리오","마늘치킨","핫데블치킨"];
-
 var target = document.getElementById("namex");
- if(obj.value == "a") var k = name_a;
-else if(obj.value == "b") var k = name_b;
-else if(obj.value == "c") var k = name_c;
-else if(obj.value == "d") var k = name_d;
-else if(obj.value == "e") var k = name_e;
-else if(obj.value == "f") var k = name_f;
-else if(obj.value == "g") var k = name_g;
-else if(obj.value == "h") var k = name_h;
+ if(obj.value == "a") {
+ 	var k = name_a;
+  chick = "깻잎두마리치킨 대전대점";
+ }
+else if(obj.value == "b"){
+	var k = name_b;
+  chick="후라이드참잘하는집 가양자양점";
+}
+else if(obj.value == "c") {
+	var k = name_c;
+  chick="동근이숯불두마리치킨 우송점";
+}
+else if(obj.value == "d") {
+	var k = name_d;
+  chick="멕시카나치킨 용운점";
+}
+else if(obj.value == "e") {
+	var k = name_e;
+  chick="BHC 우송대보건대점";
+}
+else if(obj.value == "f") {
+	var k = name_f;
+  chick="처갓집양념치킨 용운판암점";
+}
+else if(obj.value == "g") {
+	var k = name_g;
+  chick="네네치킨 용운판암점";
+}
+else if(obj.value == "h") {
+	var k = name_h;
+  chick="페리카나 판암점";
+}
  
   target.options.length = 0;
  
@@ -30,7 +56,15 @@ else if(obj.value == "h") var k = name_h;
     opt.innerHTML = k[x];
     target.appendChild(opt);
     }
+    document.getElementById("getd").innerHTML= "치킨을 선택해 주세요";
     }
+    
+    function gett(ftm){
+    
+      document.getElementById("getd").innerHTML= chick + "의 " + ftm.value + "이 30분 내로 배달 예정입니다.";
+    
+    }
+    
     </script>
     
 </head>
@@ -49,5 +83,11 @@ else if(obj.value == "h") var k = name_h;
 <option value="g">네네치킨 용운판암점</option>
 <option value="h">페리카나 판암점</option></select>
 <label for="name">치킨</label>
-<select id="namex" name="name"></select>
-</fieldset></section></body></html>
+<select id="namex" name="name" onchange="gett(this)"></select>
+</fieldset>
+
+<fieldset><legend>☆선택한 맛있는 치킨★</legend>
+<p id="getd"></p>
+</fieldset>
+
+</section></body></html>
