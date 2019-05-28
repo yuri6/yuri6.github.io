@@ -5,7 +5,11 @@
 <meta charset="utf-8"><meta name="viewprot" content="width=device-width, inital-scale=1">
 
 <style>
-*{margin:0; padding:0;} p{text-align:justify;}
+*{box-sizing:border-box; padding:0; margin:0; }  .row::after{content:""; clear:both; display:table;}
+.col-1{width:8.33%;} .col-2{width:16.66%;} .col-3{width:25%;} .col-4{width:33.33%;} 
+.col-5{width:41.66%;} .col-6{width:50%;} .col-7{width:58.33%;} .col-8{width:66.66%;} 
+.col-9{width:75%;} .col-10{width:83.33%;} .col-11{width:91.66%;} .col-12{width:100%;} 
+
 header,nav,section,article,aside,footer
 {border:1px solid gray; margin:5px; padding:8px; width:1000px;}
 section{width:1000px; float:left;}
@@ -23,8 +27,6 @@ a:active{color:blue; background-color:transparent; text-decoration:none;}
 .footer{height:50px; clear:both; text-align:center;}
 #idcenter{text-align:center;}
 #idleft{text-align:left;}
-.img1{float:left; margin:5px;}
-.bdcolor { border:1px solid blue; }
 </style>
 
 <title>포트폴리오</title>
@@ -48,13 +50,15 @@ a:active{color:blue; background-color:transparent; text-decoration:none;}
 
 <section>
 <section id="idcenter"><h3 id="a">개인 spec</h3>
-<div class="img1 bdcolor" img src="/portfolio/img/aside.jpg" class="verticalAlignT"width="200" height="200" alt="사진"/ ></div>
+<section class="col-3"> <img src="/portfolio/img/aside.jpg" class="col-3" height="100" alt="사진"/ ></section>
+
 <div><li id="idleft">이름 : 권유리</li></div>
 <div><li id="idleft">생년월일 : 1999.12.24</li></div>
 <div><li id="idleft">좋아하는 것 : 치킨 , 강아지 , 고양이 , 햄스터 , 짱구 , 침대 , 엄마아빠  동생<del>은별로.</del></li></div>
 <div><li id="idleft">잘하는 것 : 먹고 자기</li></div> 
 <div><li id="idleft">SNS : <a href="https://yuri6.github.io/portfolio/facebook.html">Faceboock</a> , <a href="https://yuri6.github.io/portfolio/instagrammy.html">Instagram</a></li></div>
-<p></p>
+
+
 </section>
 
 <section><h3 id="b">학력</h3>
