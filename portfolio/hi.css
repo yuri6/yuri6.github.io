@@ -13,9 +13,8 @@
 .menu li:hover{color:none; background-color:transparent; text-decoration:none; }
 
 .banner li{border:2px solid black; padding:10px; margin-bottom:10px; box-shadow: 0 1px 3px gray;}
-.banner li img{width:30%; vertical-align:middle;}
 
-a:link{color:black; text-decoration:none;}
+a:link{color:blue; text-decoration:none;}
 a:visited{color:purple;}
 
 /* for mobile*/
