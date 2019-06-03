@@ -7,6 +7,17 @@
 
 <style>table, tr, th, td{border:1px solid black;  border-collapse: collapse;} </style><!--  border-collapse: collapse 단선으로,반대는 separate -->
 
+<script type="text/javascript">
+function doDisplay(noDiv){
+    var con = document.getElementById(noDiv);
+    if(con.style.display=='none'){
+        con.style.display = 'block';
+    }else{
+        con.style.display = 'none';
+    }
+}
+</script>
+
 <title>수업 수강 내역</title>
 </head>
 
@@ -33,7 +44,7 @@
 <section class="col-6 colt-t-9">
 <h3 align="center">수업 수강 내역</h3>
 <ul>
-<p align="center">▶ 1학년 1학기</p>
+<p align="center"><a href="javascript:doDisplay('div1');">▶ 1학년 1학기</a></p>
   <style>
    .Nmajor1 {background-color:lightpink;}
    .Nmajor2 {background-color:yellow;}
@@ -48,8 +59,9 @@
    .Digital{background-color:lavender;}
    .Internt{background-color:honeydew;}
    .Cam{background-color:greenyellow;}
+   
    </style>
-
+<div id="div1" style="display:none">
   <table align="center">
   <thead>
   <tr>
@@ -99,9 +111,10 @@
   </tr>
   </tbody>
 </table>
+</div>
 
-<p align="center">▶ 1학년 2학기</p>
-  
+<p align="center"><a href="javascript:doDisplay('div2');">▶ 1학년 2학기</a></p>
+  <div id="div2" style="display:none">
   <table align="center">
   <thead>
   <tr>
@@ -151,8 +164,10 @@
   </tr>
   </tbody>
 </table>
+</div>
+<p align="center"><a href="javascript:doDisplay('div3');">▶ 2학년 1학기</a></p>
 
-<p align="center">▶ 2학년 1학기</p>
+<div id="div3" style="display:none">
 <table align="center">
   <thead>
   <tr>
@@ -202,6 +217,7 @@
   </tr>
   </tbody>
 </table>
+</div>
 
 </ul>
 </section>
