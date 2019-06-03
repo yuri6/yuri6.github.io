@@ -12,8 +12,9 @@
 .menu li:hover{color:none; background-color:transparent; text-decoration:none; }
 
 .banner li{border:2px solid black; padding:10px; margin-bottom:10px; box-shadow: 0 1px 3px gray;}
-.tr{width:500px; height:100px;}
+
 .table{width:700px; height: 400px;}
+.tr{width:300px; height: 200px;}
 
 a:link{color:blue; text-decoration:none;}
 a:visited{color:purple;}
