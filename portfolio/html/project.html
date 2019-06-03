@@ -5,8 +5,17 @@
 <meta charset="utf-8"/><meta name="viewport"content="width=device-width,initial-scale=1"/>
 <link rel="stylesheet" href="/portfolio/hi.css"/>
 
-<style>
-</style>
+<script type="text/javascript">
+function doDisplay(noDiv){
+    var con = document.getElementById(noDiv);
+    if(con.style.display=='none'){
+        con.style.display = 'block';
+    }else{
+        con.style.display = 'none';
+    }
+}
+</script>
+
 <title>학력</title>
 </head>
 
@@ -34,25 +43,34 @@
 <h3 align="center">과목별 프로젝트 설명</h3>
 <ul>
 
-<p align="center">▶ 소프트웨어 디자인</p>
+<p align="center"><a href="javascript:doDisplay('div1');">▶ 소프트웨어 디자인</a></p>
 <picutre align="center">
+
+<div id="div1" style="display:none">
   <img src="https://yuri6.github.io/portfolio/img/소웨디.png"/>
+  </div>
 </picutre>
 
-<p align="center">▶ C프로그래밍</p>
+<p align="center"><a href="javascript:doDisplay('div2');">▶ C프로그래밍</a></p>
 <picutre align="center">
+<div id="div2" style="display:none">
   <img src="https://yuri6.github.io/portfolio/img/소웨디.png"/>
+  </div>
 </picutre>
 
-<p align="center">▶ C++프로그래밍</p>
-<p>
+<p align="center"><a href="javascript:doDisplay('div3');">▶ C++프로그래밍</a></p>
 
-</p>
 <picutre >
-  <img src="https://yuri6.github.io/portfolio/img/씨쁠쁠코딩1.png" align="center"/>
-</picutre>
-<picutre align="center">
+<div id="div3" style="display:none">
   <img src="https://yuri6.github.io/portfolio/img/씨쁠쁠.png"/>
+  <p align="center">
+  <a href="javascript:doDisplay('div4');">▲코딩</a></p>
+  <div id="div4" style="display:none">
+  <img src="https://yuri6.github.io/portfolio/img/씨쁠쁠코딩1.png"/>
+  </div>
+  
+
+  </div>
 </picutre>
 
 
